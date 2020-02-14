@@ -32,7 +32,7 @@ public void drawBranches(double x,double y, double branchLength, double minutes,
 		line((float) x, (float) y, (float) (x + Math.cos(minutes/60) * branchLength), (float) (y + Math.sin(minutes/60) * branchLength));
 		line((float) x, (float) y, (float) (x + Math.cos(minutes) * branchLength), (float) (y + Math.sin(minutes) * branchLength));
 		drawBranches(x + Math.cos(minutes) * branchLength, y + Math.sin(minutes) * branchLength, branchLength/1.5, minutes + originalAngle/60, originalAngle, colorchange + mycolor);
-		drawBranches(x + Math.cos(minutes/60) * branchLength, y + Math.sin(minutes/60) * branchLength, branchLength/1.5, minutes + originalAngle/60, originalAngle, colorchange + mycolor);
+		drawBranches(x + Math.cos(minutes/60) * branchLength, y + Math.sin(minutes/60) * branchLength, branchLength/1.5, minutes + originalAngle/360, originalAngle, colorchange + mycolor);
 		
 	}
 	//line((float) x, (float) y, (float) (y + Math.cos(minutes/60) * branchLength), (float) (y + Math.sin(minutes/60) * branchLength));
