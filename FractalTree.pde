@@ -17,8 +17,8 @@ public void draw()
 	time += 0.1;
 } 
 float c = 0;
-float colorchange = 1;
-public void drawBranches(double x,double y, double branchLength, double minutes, double originalAngle, double rcolor) 
+float colorchange = 5;
+public void drawBranches(double x,double y, double branchLength, double minutes, double originalAngle, float mycolor) 
 {   
 	//your code here    
 	if(branchLength == 100){
@@ -26,12 +26,11 @@ public void drawBranches(double x,double y, double branchLength, double minutes,
 			stroke(c, 255, 255);
 	}
 	if(branchLength > 2){
-		float mycolor = (float) (c + rcolor);
 		if (mycolor >= 255)  mycolor=0;  else  mycolor += colorchange;
 			stroke(mycolor, 255, 255);
 		line((float) x, (float) y, (float) (x + Math.cos(minutes/60) * branchLength), (float) (y + Math.sin(minutes/60) * branchLength));
 		line((float) x, (float) y, (float) (x + Math.cos(minutes) * branchLength), (float) (y + Math.sin(minutes) * branchLength));
-		drawBranches(x + Math.cos(minutes) * branchLength, y + Math.sin(minutes) * branchLength, branchLength/1.5, minutes + originalAngle/60, originalAngle, colorchange + mycolor);
+		drawBranches(x + Math.cos(minutes) * branchLength, y + Math.sin(minutes) * branchLength, branchLength/1.5, minutes + originalAngle/60, originalAngle, colorchange + mycolor );
 		drawBranches(x + Math.cos(minutes/60) * branchLength, y + Math.sin(minutes/60) * branchLength, branchLength/1.5, minutes + originalAngle/360, originalAngle, colorchange + mycolor);
 		
 	}
