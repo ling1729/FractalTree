@@ -13,7 +13,7 @@ public void draw()
 	background(0);   
 	stroke(0,255,0);   
 	//line(320,480,320,380);
-	drawBranches(500,500,100,time/6, time/6, 0);  //will add later 
+	drawBranches(500,500,100,time/12, time/12, 0);  //will add later 
 	time += 0.1;
 } 
 float c = 0;
