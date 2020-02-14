@@ -25,7 +25,7 @@ public void drawBranches(double x,double y, double branchLength, double minutes,
 		if (c >= 255)  c=0;  else  c+= 0.1;
 			stroke(c, 255, 255);
 	}
-	if(branchLength > 1){
+	if(branchLength > 2){
 		float mycolor = (float) (c + rcolor);
 		if (mycolor >= 255)  mycolor=0;  else  mycolor += colorchange;
 			stroke(mycolor, 255, 255);
