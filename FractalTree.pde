@@ -30,6 +30,7 @@ public void drawBranches(double x,double y, double branchLength, double minutes,
 			stroke(mycolor, 255, 255);
 		line((float) x, (float) y, (float) (x + Math.cos(minutes/60) * branchLength), (float) (y + Math.sin(minutes/60) * branchLength));
 		line((float) x, (float) y, (float) (x + Math.cos(minutes) * branchLength), (float) (y + Math.sin(minutes) * branchLength));
+		//ellipse((float) x, (float) y, (float) branchLength * 2, (float) branchLength * 2);
 		drawBranches(x + Math.cos(minutes) * branchLength, y + Math.sin(minutes) * branchLength, branchLength/1.5, minutes + originalAngle/60, originalAngle, colorchange + mycolor );
 		drawBranches(x + Math.cos(minutes/60) * branchLength, y + Math.sin(minutes/60) * branchLength, branchLength/1.5, minutes + originalAngle/360, originalAngle, colorchange + mycolor);
 		
